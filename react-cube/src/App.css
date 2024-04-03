@@ -1,0 +1,81 @@
+/* App container */
+.app {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Left side */
+.customer-list {
+  flex: 1;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+}
+
+.customer-card {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customer-card:hover {
+  background-color: #e0e0e0;
+}
+
+.customer-card.selected {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+/* Right side */
+.customer-details {
+ 
+  flex: 2;
+  padding: 10px;
+}
+
+.customer-details h2 {
+  margin-top: 0;
+}
+
+/* Photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); 
+  gap: 10px;
+}
+
+.photo-item {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.photo-item img {
+  width: 100px;
+  height: 100px;
+  
+  object-fit: cover;
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  color: #fff;
+}
+
+.photo-info h4,
+.photo-info p {
+  margin: 0;
+}
