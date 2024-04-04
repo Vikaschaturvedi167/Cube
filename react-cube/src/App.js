@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const UNSPLASH_ACCESS_KEY = 'ZtVzVDNcTG1LPOP_PewnVJ4zKffVRtueNZasdcUb0sE';
+const UNSPLASH_ACCESS_KEY = 'RHDgy7d-rnf61RybwnJMe38OY4sFy3isgtM4thztAIU';
 const UNSPLASH_API_URL = `https://api.unsplash.com/photos/random?count=9&client_id=${UNSPLASH_ACCESS_KEY}`;
-const CUSTOMERS_API_URL = 'https://jsonplaceholder.typicode.com/users?_limit=100';
+const CUSTOMERS_API_URL = 'https://jsonplaceholder.typicode.com/photos?_limit=1000';
 
 function App() {
   const [customers, setCustomers] = useState([]);
@@ -67,17 +67,17 @@ function App() {
             className={`customer-card ${selectedCustomer && selectedCustomer.id === customer.id ? 'selected' : ''}`}
             onClick={() => handleCustomerSelect(customer)}
           >
-            <h3>{customer.name}</h3>
-            <p>{customer.company.name}</p>
+            <h3>{customer.title}</h3>
+          
           </div>
         ))}
       </div>
       <div className="customer-details">
         {selectedCustomer && (
           <>
-            <h2>{selectedCustomer.name}</h2>
+           
             <p>{selectedCustomer.title}</p>
-            <p>{selectedCustomer.address.street}, {selectedCustomer.address.city}</p>
+            
             {renderPhotoGrid()}
           </>
         )}

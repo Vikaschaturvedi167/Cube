@@ -37,6 +37,7 @@
  
   flex: 2;
   padding: 10px;
+  margin-left: 70px;
 }
 
 .customer-details h2 {
@@ -46,21 +47,21 @@
 /* Photo grid */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 100px); 
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2px;
 }
 
 .photo-item {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   position: relative;
   overflow: hidden;
   border: 1px solid #ccc;
 }
 
 .photo-item img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   
   object-fit: cover;
 }
